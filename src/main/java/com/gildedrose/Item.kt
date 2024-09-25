@@ -1,21 +1,19 @@
-package com.gildedrose;
+package com.gildedrose
 
-public class Item {
+class Item(name: String?, sellIn: Int, quality: Int) {
+    var name: String? = null
 
-    public String name;
+    var sellIn: Int = 0
 
-    public int sellIn;
+    var quality: Int = 0
 
-    public int quality;
-
-    public Item(String name, int sellIn, int quality) {
-        this.name = name;
-        this.sellIn = sellIn;
-        this.quality = quality;
+    init {
+        this.name = name
+        this.sellIn = sellIn
+        this.quality = quality
     }
 
-   @Override
-   public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+    override fun toString(): String {
+        return this.name + ", " + this.sellIn + ", " + this.quality
     }
 }
